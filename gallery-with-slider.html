@@ -60,63 +60,57 @@
     </div>
   </div> 
 <!--  end navigation -->
-<!--  contact page  -->
-  <div id="contact-page-two" class="contact-page-two-main-block">
+<!--  page banner -->
+  <div id="page-banner" class="page-banner-main" style="background-image: url('images/bg/page-banner.jpg')">
     <div class="container">
-      <div class="contact-page-two-block text-center">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="contact-block-two">
-              <i class="fa fa-mobile-phone" aria-hidden="true"></i>
-              <p>Mobile: +1234567890</p>
-              <p>Phone: +1234567890</p>
-              <p>Fax: +1234567890</p>  
-            </div>     
-          </div>
-          <div class="col-sm-4">
-            <div class="contact-block-two">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <p>Po Box 54537</p>
-              <p>4352 Your Address</p>
-              <p>Your City,Your Country</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="contact-block-two">
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              <p>info@company.com</p>
-              <p>help@company.com</p>
-              <p>www.carwash.com</p>
-            </div>
-          </div>
+      <div class="page-banner-block">
+        <div class="section">
+          <h3 class="section-heading">Portfolio</h3>
         </div>
-        <div class="contact-form-block">
-          <form id="contact-form" class="contact-form" method="post" action="contact-us.php">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Full Name">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail">
-                </div> 
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-            </div> 
-            <div class="message">
-              <textarea id="message" name="message" rows="6" placeholder="Message"></textarea>
-            </div> 
-            <button type="button" class="btn btn-default">Send Message</button>              
-          </form>
-        </div>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="gallery-with-slider.html">Gallery</a></li>
+        </ol>
       </div>
     </div>
   </div>
-<!--  end contact page two -->
+<!--  end page banner  -->
+<!--  gallery -->
+  <div id="work-gallery" class="work-gallery-main-block work-gallery-two-main-block">
+    <div class="container">
+      <div class="section text-center">
+        <h3 class="section-heading">Working gallery</h3>
+        <p class="sub-heading">Donec pede justo fringilla vel aliquet nec vulputate eget arcu enim rhoncus</p>
+      </div>
+      <div id="work-gallery-slider" class="work-gallery-slider">
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-01.jpg" class="img-responsive" alt="gallery-01">
+          <div class="overlay-bg"><a href="images/gallery/gallery-01.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-02.jpg" class="img-responsive" alt="gallery-02">
+          <div class="overlay-bg"><a href="images/gallery/gallery-02.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-03.jpg" class="img-responsive" alt="gallery-03">
+          <div class="overlay-bg"><a href="images/gallery/gallery-03.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-04.jpg" class="img-responsive" alt="gallery-04">
+          <div class="overlay-bg"><a href="images/gallery/gallery-04.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-05.jpg" class="img-responsive" alt="gallery-05">
+          <div class="overlay-bg"><a href="images/gallery/gallery-05.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="item work-gallery-block"> 
+          <img src="images/gallery/gallery-06.jpg" class="img-responsive" alt="gallery-06">
+          <div class="overlay-bg"><a href="images/gallery/gallery-06.jpg" title="Your Image Title"><i class="fa fa-plus"></i></a></div>
+        </div>
+      </div>
+    </div>          
+  </div>
+<!--  end gallery -->
 <!--  footer -->
 <footer id="footer" class="footer-main-block">
   <div class="footer-block">
@@ -245,34 +239,7 @@
 <script type="text/javascript" src="js/price-slider.js"></script> <!-- price slider / filter js-->
 <script type="text/javascript" src="js/bootstrap-datepicker.js"></script> <!-- bootstrap datepicker js--> 
 <script type="text/javascript" src="js/jquery.elevatezoom.js"></script> <!-- image zoom js-->
-<script type="text/javascript" src="js/theme.js"></script> <!-- custom js -->   
-<script>
-  jQuery(function($) {
-    // Asynchronously Load the map API 
-    var script = document.createElement('script');
-    script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
-    document.body.appendChild(script);
-  });
-  function initialize(){
-    var myLatLng = {lat: 25.3500, lng: 74.6333}; // Insert Your Latitude and Longitude For Footer Wiget Map
-    var mapOptions = {
-      center: myLatLng, 
-      zoom: 15,
-      disableDefaultUI: true,
-      scrollwheel: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]     
-    }
-    // For Footer Widget Map
-    var map = new google.maps.Map(document.getElementById("location"), mapOptions);
-    var image = 'images/icons/map.png';
-    var beachMarker = new google.maps.Marker({
-      position: myLatLng, 
-      map: map,   
-      icon: image
-    });    
-  }
-</script>
+<script type="text/javascript" src="js/theme.js"></script> <!-- custom js -->  
 <!-- end jquery -->
 </body>
 <!--body end -->
